@@ -10,12 +10,14 @@ public class candacepolisilib {
         return r;
     }
 
-    public static void table(int b, int r) {
+    public static String table(int b, int r) {
         int a = 0;
+        String x = "";
         for (int i = 1; r > i; i++) {
-            a = b * i;
-            System.out.println("b*i=" + a);
+            a = a + b;
+            x = " " + x + "  " + (b + " * " + i + " = " + a);
         }
+        return x;
     }
 
     public static String pali(String pal) {

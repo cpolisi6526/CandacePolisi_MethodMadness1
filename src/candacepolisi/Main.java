@@ -2,8 +2,8 @@ package candacepolisi;
 
 public class Main {
 
-    public static void main(String[] args) {
-	// write your code here
-    System.out.println(candacepolisilib.LCM(3,4));
+   public static void main(String[] args){
+    System.out.println(candacepolisilib.quad(1,8,60));
     }
 }
+
