@@ -72,26 +72,18 @@ public class candacepolisilib {
     }
 
     public static int LCM(int a, int b){
-        int m=1;
-        if (a==1){
+        int m=a;
+        if ((a==1)||(b==1)){
             m=1;
         }
-        if (b==1){
-            m=1;
-        }
-        if (a==0){
-            m=0;
-        }
-        if (b==0) {
+        if ((a==0)||(b==0)) {
             m = 0;
         }
         else{
-            for (int i=1; m%a >0; i++){
-                m= a * i;
+            while (m%b>0){
+                m=m+a;
             }
         }
         return m;
     }
-
-
 }
