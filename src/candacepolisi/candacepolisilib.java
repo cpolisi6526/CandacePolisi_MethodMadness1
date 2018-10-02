@@ -89,5 +89,5 @@ public class candacepolisilib {
         return m;
     }
 
-    public static int 
+    public static int
 }
