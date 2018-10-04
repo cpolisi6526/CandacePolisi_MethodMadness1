@@ -89,5 +89,43 @@ public class candacepolisilib {
         return m;
     }
 
-    public static int
+    public static int common(String a, String b, String c) {
+        int r = 0;
+        String le = "";
+        int i = 1;
+        for (int d =0; a.length()>d; d++) {
+            le = a.substring(d,d+1);
+            i = b.indexOf(le);
+            if (i > 0) {
+                r++;
+                while (i > 0) {
+                    b = b.substring(0, i) + b.substring(i + 1);
+                    i = b.indexOf(le);
+                }
+            }
+            else {
+                i = c.indexOf(le);
+                if (i > 0) {
+                    r++;
+                    while (i > 0) {
+                        c = c.substring(0, i) + c.substring(i + 1);
+                        i = c.indexOf(le);
+                    }
+                }
+            }
+        }
+        for (int d =0; b.length()>d; d++) {
+            le = b.substring(d, d+1);
+            i = b.indexOf(le);
+            if (i > 0) {
+                r++;
+                while (i > 0) {
+                    c = c.substring(0, i) + c.substring(i + 1);
+                    i = c.indexOf(le);
+                }
+            }
+        }
+        return r;
+    }
+
 }
