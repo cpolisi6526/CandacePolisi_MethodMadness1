@@ -96,18 +96,18 @@ public class candacepolisilib {
         for (int d =0; a.length()>d; d++) {
             le = a.substring(d,d+1);
             i = b.indexOf(le);
-            if (i > 0) {
+            if (i >= 0) {
                 r++;
-                while (i > 0) {
+                while (i >= 0) {
                     b = b.substring(0, i) + b.substring(i + 1);
                     i = b.indexOf(le);
                 }
             }
             else {
                 i = c.indexOf(le);
-                if (i > 0) {
+                if (i >= 0) {
                     r++;
-                    while (i > 0) {
+                    while (i >= 0) {
                         c = c.substring(0, i) + c.substring(i + 1);
                         i = c.indexOf(le);
                     }
@@ -117,9 +117,9 @@ public class candacepolisilib {
         for (int d =0; b.length()>d; d++) {
             le = b.substring(d, d+1);
             i = b.indexOf(le);
-            if (i > 0) {
+            if (i >= 0) {
                 r++;
-                while (i > 0) {
+                while (i >= 0) {
                     c = c.substring(0, i) + c.substring(i + 1);
                     i = c.indexOf(le);
                 }
@@ -127,5 +127,33 @@ public class candacepolisilib {
         }
         return r;
     }
+    public static String vig(String og, String sh){
+        String r="";
+        String alphabet= "abcdefghijklmnopqrstuvwxyz";
+        int ogl= 0;
+        int shl= 0;
+        String let= "";
+        String shift= "";
+        int d= 0;
+        int rnum= 0;
+        int c;
+        for (c = 0; c < (og.length() - 1); c++){
+            let= og.substring(c,c+1);
+            ogl= alphabet.indexOf(let);
+            if (d> sh.length()-1){
+                d=0;
+            }
+            shift= sh.substring(d,d+1);
+            shl= alphabet.indexOf(shift);
+            d++;
+            rnum= ogl + shl;
+            if (rnum> alphabet.length()-1){
+                rnum= alphabet.length()-1- rnum;
+            }
+            r= r + alphabet.substring(rnum, rnum+1);
+        }
+        return r;
+    }
+
 
 }
