@@ -5,6 +5,7 @@ public class candacepolisilib {
     public static int sumUp(int x) {
         int r = 0;
         for (int c = x; c > 0; c--) {
+            //starting from number adds each number leading up to it
             r += c;
         }
         return r;
@@ -15,12 +16,14 @@ public class candacepolisilib {
         String x = "";
         for (int i = 1; r > i; i++) {
             a = a + b;
+            /// makes x a multipication table
             x = " " + x + "  " + (b + " * " + i + " = " + a);
         }
         return x;
     }
 
     public static String pali(String pal) {
+        // puts backwards string in new var then sees if equal
         String check = "";
         for (int c = pal.length(); c > 0; c--) {
             check = c + pal.substring(c, c + 1);
@@ -37,6 +40,7 @@ public class candacepolisilib {
         int b = 1;
         int c = 0;
         while (z > a && z > b && z > c) {
+           // keeps adding three numbers together in loop bc thats what f seq is
             c = a + b;
             b = c + a;
             a = c + b;
@@ -67,6 +71,7 @@ public class candacepolisilib {
     public static String cutOut(String str, String sh) {
         String r = "";
         int c = str.indexOf(sh);
+        ///strings together the two puts before and after the sh
         r = str.substring(0, c) + str.substring(c + sh.length() - 1);
         return r + " " + sh;
     }
@@ -92,10 +97,13 @@ public class candacepolisilib {
         int i = 1;
         for (int d = 0; a.length() > d; d++) {
             le = a.substring(d, d + 1);
+            //puts  letter into own variable
             i = b.indexOf(le);
+            // find var in other number
             if (i >= 0) {
                 r++;
                 while (i >= 0) {
+                    //removes all common letter out of second word
                     b = b.substring(0, i) + b.substring(i + 1);
                     i = b.indexOf(le);
                 }
@@ -138,6 +146,7 @@ public class candacepolisilib {
         for (c = 0; c < (og.length()); c++) {
             let = og.substring(c, c + 1);
             ogl = alphabet.indexOf(let);
+            // find letter on place of alphabet string
             if (d > sh.length() - 1) {
                 d = 0;
             }
