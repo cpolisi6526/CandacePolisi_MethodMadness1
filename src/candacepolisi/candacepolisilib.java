@@ -62,7 +62,7 @@ public class candacepolisilib {
             s = Math.sqrt(s);
             r = s;
             s = (-b + s) / (2 * a);
-            r = (-b - s) / (2 * a);
+            r = (-b - s) / (a);
             res = "" + s + " and " + r;
             return res;
         }
