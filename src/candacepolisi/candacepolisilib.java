@@ -134,6 +134,7 @@ public class candacepolisilib {
     }
 
     public static String vig(String og, String sh) {
+        //a shifts 0, b shifts by 1, c shifts by 2 (it was never specified like the am each letter was weighted technically)
         String r = "";
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
         int ogl = 0;
@@ -154,6 +155,7 @@ public class candacepolisilib {
             shl = alphabet.indexOf(shift);
             d++;
             rnum = ogl + shl;
+            //if goes above 26 goes back 
             if (rnum > alphabet.length() - 1) {
                 rnum = rnum - alphabet.length() - 1;
             }
