@@ -72,7 +72,7 @@ public class candacepolisilib {
         String r = "";
         int c = str.indexOf(sh);
         ///strings together the two puts before and after the sh
-        r = str.substring(0, c) + str.substring(c + sh.length() - 1);
+        r = str.substring(0, c) + str.substring(c + sh.length());
         return r + " " + sh;
     }
 
